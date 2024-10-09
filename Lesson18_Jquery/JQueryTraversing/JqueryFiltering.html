@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Filtering</h1>
+    <div style="border: 2px solid black;">
+        <p>đây là p1</p>
+        <p>đây là p2</p>
+    </div>
+    <div style="border: 2px solid black;">
+        <p>đây là p1</p>
+        <p>đây là p2</p>
+    </div>
+    <div style="border: 2px solid black;">
+        <p>đây là p1</p>
+        <p>đây là p2</p>
+    </div>
+    <div style="border: 2px solid black;" class="div1">
+        <p>đây là p111</p>
+        <p>đây là p222</p>
+    </div>
+    <div style="border: 2px solid black;">
+        <p>đây là p1</p>
+        <p>đây là p2</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("div").first().css({"background-color":"green"})
+            $("div").last().css({"background-color":"green"})
+            $("div").eq(1).css({"background-color":"green"})
+            $("div").filter(".div1").css({"background-color":"green"})
+            $("div").not(".div1").css({"background-color":"gray"})
+        })
+    </script>
+</body>
+</html>

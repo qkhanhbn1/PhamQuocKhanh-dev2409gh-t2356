@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <section id="zone1">
+        <h2>Chọn màu chữ</h2>
+        <div class="button">
+            <button value="red">Đỏ</button>
+            <button value="blue">Xanh</button>
+            <button value="yellow">Vàng</button>
+            <button value="green">xanh lá</button>
+            <button value="purple">Tím</button>
+        </div>
+        <div class="noi-dung">
+            <p>Lập trình web PHP</p>
+        </div>
+
+        <button id="reset">Reset</button>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $('.button > button').click(function(){
+                 //lấy màu của value trong button
+                let valColor = $(this).attr("value");
+                //tô màu
+                $(this).css("background-color",valColor)
+                .css({
+                    "border":"1px solid ",
+                    
+                });
+            })
+            $('.button button').click(function(){
+                //lấy màu từ nút
+                let color = $(this).attr('value');
+                //set color cho nd
+                $('p').css({
+                    'color':color
+                })
+            })
+            $('#reset').click(function(){
+                $('p').css('color','black')
+            })
+            //hoặc
+            $('#zone1 > button').click(function(){
+                $('p').css('color','black')
+            })
+           
+     
+        })
+    </script>
+</body>
+</html>

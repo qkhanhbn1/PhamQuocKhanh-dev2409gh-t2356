@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Content with jQuery</title>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .tabs button {
+            background-color: lightgray;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tabs">
+    <button class="tab-btn active" data-tab="html">HTML</button>
+    <button class="tab-btn" data-tab="css">CSS</button>
+    <button class="tab-btn" data-tab="jquery">Jquery</button>
+    <button class="tab-btn" data-tab="php">PHP</button>
+</div>
+
+<div id="html" class="tab-content active-tab">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illum ipsa aliquid sit...</p>
+</div>
+<div id="css" class="tab-content">
+    <p>CSS content here...</p>
+</div>
+<div id="jquery" class="tab-content">
+    <p>JQuery content here...</p>
+</div>
+<div id="php" class="tab-content">
+    <p>PHP content here...</p>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $('.tab-btn').click(function() {
+            var tabId = $(this).data('tab');
+            
+
+            $('.tab-btn').removeClass('active');
+            $('.tab-content').removeClass('active-tab').hide();
+            
+
+            $(this).addClass('active');
+            $('#' + tabId).addClass('active-tab').show();
+        });
+    });
+</script>
+
+</body>
+</html>

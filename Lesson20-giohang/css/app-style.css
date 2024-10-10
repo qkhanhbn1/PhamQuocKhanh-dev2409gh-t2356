@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: "Arial";
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+.bg-white{
+    background-color: #fff;
+    height: 550px;
+}
+.box-item{
+    border: 1px solid #ccc;
+    box-shadow: 6px 6px 6px -1px rgba(0,0,0,0.35);
+}
+.img{
+    width: 6rem;
+}
+.img img{
+    width: 100%;
+    
+}
+.gh-item button{
+    padding: 0 .75rem;
+    border: 1px solid #cccc;
+    
+}
+.gh-item input{
+    width: 55px;
+    border: 1px solid #cccc;
+    text-align: center;
+}
+.gh-item input:focus{
+    outline: none;
+}
+
+#gioHang p {
+    margin: 0.25rem 0 ;
+}
+.gh-item p span{
+    color: red;
+}
+.gh-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.gh-action button {
+    margin: 4px 0px;
+    border-radius: 5px;
+    border:2px solid black;
+    color: rgb(248, 141, 0);
+    background-color: #fff;
+    
+}
+.p-act button{
+    margin: 0 3px;
+    border:2px solid black; 
+}
+.p-act input{
+    border:2px solid black;
+}
+.p-info p{
+    margin: 10px 0;
+}
+.gh-order span{
+    color: red;
+}
+.gh-order button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
